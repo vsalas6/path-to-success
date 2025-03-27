@@ -1,9 +1,57 @@
-/* ----------  CSS BY NAME ---------- */
+/* ----------  CSS BY Vivian Salas ---------- */
 
 /* ----------  IMPORTED FONTS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
 
 /* ----------  CSS REST ---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* ----------  ROOT VARIABLES ---------- */
 :root{
@@ -26,7 +74,6 @@
   body{
     font-family: 'Inter', serif;
     background-color: var(--purple);
-    width: 100%;
   }
 
   header{
@@ -48,7 +95,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
   }
 
   nav ul{
@@ -68,20 +115,25 @@
 
   header>p{
     color: var(--white);
+    padding-top: 20px;
+    font-style: italic;
   }
 
   h1{
     font-size: 3em;
-    padding: 20px 0 0 0;
+    padding-top: 50px;
   }
 
   #menu{
+    padding: 50px 20px 20px;
     background-color: var(--yellow);
-    padding: 50px 200px;
   }
 
   #menu h3{
     margin-top: -30px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-style: italic;
   }
 
   nav, h2{
@@ -89,29 +141,35 @@
   }
 
   img{
-    padding: 0 15px;
+    padding: 10px 15px;
   }
 
-  h2{
+  section h2{
     font-size: 2em;
-    margin-left: 30px;
-    margin-bottom: -25px;
+    margin: 15px 15px;
   }
 
-  h3{
+  section h3{
     font-size: 1.5em;
-    margin: 30px;
+    margin: 0px 15px;
+    font-weight: bold;
   }
 
-  h4{
+  section h4{
     font-size: 1.15em;
     color: var(--purple);
-    padding: 0 15px;
+    font-weight: bold;
+    padding: 10px 15px;
   }
 
-  p{
+   section p{
     line-height: 30px;
     padding: 0px 15px;
+  }
+
+  #our-services{
+    padding-top: 20px;
+    padding-bottom: 15px;
   }
 
   #our-services h3{
@@ -125,8 +183,8 @@
   #personal-development, #career-coaching, #relationship-coaching, #supportive-community, #focused-session, #interactive-learning, #flexible-learning{
     background-color: var(--white);
     border-radius: 25px;
-    padding: 10px;
-    margin: 20px 70px;
+    padding: 20px;
+    margin: 20px;
   }
 
   #why-choose-us{
@@ -134,7 +192,8 @@
   }
 
   #why-choose-us h2{
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   #why-choose-us ul{
@@ -142,17 +201,18 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     list-style-type: none;
-    padding: 0 30px 20px 30px;
+    padding: 0 10px 20px;
   }
 
   #why-choose-us li{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    border-radius: 10px;
+    height: 120px;
+    border-radius: 20px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
+    text-align: center;
   }
 
   #teal{
@@ -171,16 +231,38 @@
     background-color: var(--white);
   }
 
+  #pricing{
+    margin-top: 20px;
+  }
+
   table{
+    border-spacing: 3px;
+    border-collapse: separate;
     background-color: var(--yellow);
-    margin-top: -25px;
-    background-color: var(--yellow);
-    width: 40%;
+    width: 60%;
     margin: -20px auto;
   }
 
   th{
-    padding: 10px;
+    padding: 20px;
+  }
+
+  #pricing h2{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: -10px;
+  }
+
+  #pricing h3{
+    margin: 30px 15px;
+  }
+
+  #pricing table tr:first-child th {
+    font-weight: bold;
+  }
+
+  table tr:not(:first-child) th{
+    background-color: var(--white);
   }
 
   #first-step{
@@ -192,7 +274,10 @@
 
   #first-step h2{
     padding-top: 20px;
-    padding-bottom: 20px;
+  }
+
+  #first-step p{
+    padding-bottom: 5px;
   }
 
   #first-step a{
@@ -203,14 +288,10 @@
     align-items: center;
     background-color: var(--white);
     border-radius: 25px;
-    margin: 0 70px;
+    margin: 0 40px;
     height: 80px;
     font-weight: bold;
     box-shadow: 10px 10px 20px 0 black;
-  }
-
-  #first-step p{
-    margin-left: 18px;
   }
 
   footer{
@@ -222,7 +303,7 @@
   }
 
   footer p{
-    padding-right: 200px;
+    padding-right: 100px;
   }
 
   footer a{
